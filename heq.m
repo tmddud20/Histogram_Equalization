@@ -9,14 +9,13 @@ prb = H2./N2; % make number of pixel to probability
 transf = zeros(1,L); % transformation function matrix
 
 for i=1:L
-    temp_proba = 0.0; % initialization sum of probability to zero
+    temp = 0.0; % initialization sum of probability to zero
 
     for j=1:i
-    temp_proba = temp_proba + prb(j); % add probability 
+    temp = temp + prb(j); % add probability 
     end
 
-    temp = round(L*(temp_proba)); % get pixel value that result of histogram equalization 
-
+    temp = round(L*(temp)); % get pixel value that result of histogram equalization 
 end
 
 for x=1:X2
