@@ -16,11 +16,7 @@ for i=1:L
     end
 
     temp = round(L*(temp_proba)); % get pixel value that result of histogram equalization 
-    if temp == 256
-        transf(i) = 255;
-    else
-        transf(i) = temp;
-    end
+
 end
 
 for x=1:X2
